@@ -1,0 +1,11 @@
+
+
+<div class="jumbotron" ng-repeat="twit in twitters">
+  <img src={{twit.user.profile_image_url_https}}>
+  <h5>{{twit.user.name}} - {{twit.user.screen_name}}</h5>
+  <h6>{{twit.created_at}}</h6>
+  <p> {{twit.text}}</p>
+  
+</div>
+
+<div id="homeTwitts"> </div>
