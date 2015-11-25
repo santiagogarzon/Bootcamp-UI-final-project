@@ -1,4 +1,5 @@
 
+
 App.factory('ajaxCalls',[ '$http',   function($http) {
 	var url='http://localhost:3000';
 	var latitude=0;
@@ -12,7 +13,7 @@ App.factory('ajaxCalls',[ '$http',   function($http) {
 			$http
 			  .get(url + '/timeline', {
 	          	
-	            params: {count: '5'}
+	            params: {count: '20'}
 	      	   })
 			  .then( function success (response) {
 	                 
