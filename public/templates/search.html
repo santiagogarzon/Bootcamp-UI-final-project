@@ -1,0 +1,16 @@
+
+
+<div class="form-group">
+  <label for="txtToSearch">Text to search:</label>
+  <input type="text" class="form-control" ng-model="txtToSearch">
+
+</div>
+<button ng-click="search(txtToSearch)" class="btn btn-success"> search</button>
+
+<div class="jumbotron" ng-repeat="twit in twitts">
+  <img src={{twit.user.profile_image_url_https}}>
+  <h5>{{twit.user.name}} - {{twit.user.screen_name}}</h5>
+  <h6>{{twit.created_at}}</h6>
+  <p> {{twit.text}}</p>
+  
+</div>

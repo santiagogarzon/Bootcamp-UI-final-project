@@ -14,9 +14,9 @@ App.config(function ($routeProvider) {
 			templateUrl: 'templates/description.html',
 			controller: 'descriptionCtrl'
 		} )
-		.when('/bloquedUsers', {
-			templateUrl: 'templates/bloquedUsers.html',
-			controller: 'bloquedUsersCtrl'
+		.when('/search', {
+			templateUrl: 'templates/search.html',
+			controller: 'searchCtrl'
 		} )
 		.otherwise({
 			redirectTo: '/home'
