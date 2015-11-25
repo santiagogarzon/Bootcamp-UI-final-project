@@ -1,0 +1,22 @@
+<div class="jumbotron" ng-hide="trendsHide">
+        <h1>TRENDS</h1>
+        
+        <ul class="list-group">
+        	<li class="list-group-item" ng-repeat="trend in trends" >
+        		{{trend.name}}
+        	    <button ng-click="show($index)">search</button>	
+        	</li>
+
+        </ul>	
+</div>
+
+<button ng-click="back()" class="btn btn-success" ng-hide="buttonHide"> Back</button>
+
+<div class="jumbotron" ng-repeat="twit in twitts">
+  <img src={{twit.user.profile_image_url_https}}>
+  <h5>{{twit.user.name}} - {{twit.user.screen_name}}</h5>
+  <h6>{{twit.created_at}}</h6>
+  <p> {{twit.text}}</p>
+  
+</div>
+

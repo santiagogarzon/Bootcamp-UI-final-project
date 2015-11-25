@@ -1,0 +1,29 @@
+
+
+<div class="form-group" ng-hide="searchHide">
+  <label for="txtToSearch">Text to search:</label>
+  <input type="text" class="form-control" ng-model="txtToSearch">
+  <button ng-click="search(txtToSearch)" class="btn btn-success"> search</button>
+</div>
+
+
+<div class="jumbotron" ng-repeat="twit in twitts" ng-hide="twittsHide">
+  <img src={{twit.user.profile_image_url_https}}>
+  <h5>{{twit.user.name}} - {{twit.user.screen_name}}</h5>
+  <h6>{{twit.created_at}}</h6>
+  <p> {{twit.text}}</p>
+  <button ng-click="show($index)">Description</button>
+  
+</div>
+
+<div class="jumbotron" ng-hide="descriptionHide">
+  <img src={{twitD.user.profile_image_url_https}}>
+  <h5>{{twitD.user.name}} - {{twitD.user.screen_name}}</h5>
+  <h6>{{twitD.created_at}}</h6>
+  <p> {{twitD.text}}</p>
+  
+</div>
+
+<button ng-click="back()" class="btn btn-success" ng-hide="buttonHide"> back</button>
+
+
